@@ -11,8 +11,10 @@ import jetson.inference
 import jetson.utils
 #import sys
 
+#Initialize inference engine for using jetson-inference module
 net = jetson.inference.detectNet("ssd-mobilenet-v2")
 
+#Initialize IP Camera link
 camlink1 = "rtsp://root:root@163.239.25.71:554/cam0_1"
 camlink2 = "rtsp://root:root@163.239.25.71:554/cam0_1"
 camlink3 = "rtsp://root:root@163.239.25.71:554/cam0_1"
@@ -22,6 +24,7 @@ flip=0
 dispW=640
 dispH=480
 
+#In thisOneDetectionModel Class send frame to network model and get result and save it.
 class OneDetectionModel():
     #In this class, we'll gonna use mobile ssd v2 network and make detection happens
 
@@ -43,10 +46,7 @@ class VideoStreamWidget(object):
         #self.net = net
         self.labels = labels
         self.colors = colors
-#        if link is -1:
-#            camset='nvarguscamerasrc !  video/x-raw(memory:NVMM), width=600, height=400, format=NV12, framerate=21/1 ! nvvidconv flip-method='+str(flip)+' ! video/x-raw, width='+str(dispW)+', height='+str(dispH)+', format=BGRx ! videoconvert ! video/x-raw, format=BGR ! appsink'
-#            self.capture = cv2.VideoCapture(camset)
-#        else:
+
         self.capture = cv2.VideoCapture(link)
         #self.capture = cv2.VideoCapture(-1)
         #self.capture.set(3,800)
@@ -70,12 +70,12 @@ class VideoStreamWidget(object):
         frame_cuda = cv2.cvtColor(frame,cv2.COLOR_RGB2RGBA).astype(np.float32)
         frame_cuda = jetson.utils.cudaFromNumpy(frame_cuda)
         startTime = time.time()
-        #i serperate to class
+        
+        #Call OneDetectionModel Class for Object Detection
         predictions=OneDetectionModel().detect_infer(frame_cuda,frame,self.camname)
         
         #############################################################################
-        #from now on i have to draw box of the detectioned object
-        #predictions = net.Detect(frame_cuda,frame.shape[1],frame.shape[0])
+
         endTime = time.time()-startTime
         calcTime = round(endTime,3)
         
@@ -83,9 +83,8 @@ class VideoStreamWidget(object):
         #print("detected {:d} objects in image".format(len(predictions)))
 
         for prediction in predictions:
-            #print(classes[prediction.ClassID])
-            #print(prediction)
-            #label="something"
+            #FOR DEBUG print(classes[prediction.ClassID])
+
             label = self.labels[prediction.ClassID]
             confidence = "%d%%"%(int(prediction.Confidence*100))
             x=int(prediction.Left)
@@ -108,14 +107,7 @@ class VideoStreamWidget(object):
 
 
 if __name__== '__main__':
-    #print("main")
-    
-    #ap = argparse.ArgumentParser()
-    #ap.add_argument("-p","--prototxt",required=True,help="path to Caffe 'deploy; prototxt file")
-    #ap.add_argument("-m","--model",required=True, help="path to Caffe pre-trained model")
-    #ap.add_argument("-c", "--confidence", type =float, default=0.2, help="minimum probability to filter weak detections")
 
-    #args = vars(ap.parse_args())
     CLASSES= ["","person","bicycle","car","motorcycle","airplane","bus","train","truck","boat","traffci light","fire hydrant","","stop sign", "parking meter","bench","bird","cat","dog","horse","sheep","cow","elephant","bear","zebra","giraffe","","backpack","umbrella","","","handbag","tie","suitcase","frisbee","skis","snowboard","sprotsball","kite","baseball bat","baseball glove", "skateboard","surfboard","tennis racket","bottle","","wine glass", "cup","fork","knife","spoon","bowl","banana","apple","sandwich","oragne","broccoli","corrot","got dog","pizza","donut","cake","chair","couch","potted plant","bed","","dining table","","","toilet","","tv","laptop","mouse","remote","keyboard","cellphone","microwave","oven", "toaster","sink","refrigerator","","book","clock","vase","scissors","teddy bear", "hair drier","toothbrush"]
 
     COLORS = np.random.uniform(0,255, size=(len(CLASSES),3))
