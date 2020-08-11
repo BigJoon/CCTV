@@ -1,13 +1,13 @@
 
-##첫번째 과정
+## 첫번째 과정
  - PASCALVOC DATA 를 TFrecord로 변환한다.
  
-##두번째 과정
+## 두번째 과정
  - TFrecord를 이용하여 tensorflow 1.12를 사용하여 학습 시킨다.
  - 위 과정에서 tensorflow-gpu 1.12 버전은 쿠다 9.0버전이 필요하므로 도커 사용을 권장한다.
  
-##세번째 과정
+## 세번째 과정
  - tensorflow-gpu 1.12 버전에서 모델을 export 시킨다.
  
-##네번째 과정
+## 네번째 과정
  - Jkjung 의 블로그를 참조하여 tensorrt로 변환한다.
