@@ -12,3 +12,7 @@
  
 ## 네번째 과정
  - Jkjung 의 블로그를 참조하여 tensorrt로 변환한다.
+
+ - https://github.com/jkjung-avt/tensorrt_demos#ssd
+ 
+ 윗 블로그를 참조할 것
