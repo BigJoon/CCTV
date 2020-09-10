@@ -35,6 +35,18 @@
  - Tensorboard, Evaluation(2000번 마다), 중간에 기록된 모델에 대해 inference(이 때 export시켜 GPU머신에서 inference 하는 스크립트로 가는 "링크" 첨부 필요)
 
 
+## 7. Export Models(with Frozen inference graph)
+ - export_inference_graph.py 를 이용하여 graph를 export 시킨다.
+
+## 8. Convert to TensorRT Engines
+ - Jkjung 의 블로그를 참조하여 tensorrt로 변환한다.
+
+ - https://github.com/jkjung-avt/tensorrt_demos#ssd
+ 
+위 블로그를 참조한다.
+ - 이후 변환된 .uff와 .engine 파일을 jetson-inference의 라이브러리 내부로 형식에 맞게 옮기면 된다.
+ - **이후 inference  링크 추가 예정 **
+
 =======================================================================================================================
 =======================================================================================================================
 ## 첫번째 과정
