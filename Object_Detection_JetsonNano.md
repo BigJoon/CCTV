@@ -1,4 +1,4 @@
-# Run Custom Finetuned Mobilenet-SSD-V2 on Jetson Nano
+# Nvidia Jetson Nano: Custom Object Detection from scratch using Tensorflow, OpenCV and TensorRT
 
 ## Requirements
  - TensorFlow 1.12
