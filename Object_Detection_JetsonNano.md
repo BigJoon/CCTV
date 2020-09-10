@@ -1,9 +1,10 @@
 # Run Custom Finetuned Mobilenet-SSD-V2 on Jetson Nano
 
 ## Requirements
- - d
- - d
- - d ...
+ - TensorFlow 1.12
+ - OpenCV
+ - Jetson Nano Developer Kit
+ - Python
 
 [![이미지](https://github.com/BigJoon/CCTV/blob/master/Script_Collection/whole_process.jpg)](https://github.com/BigJoon/CCTV/blob/master/Object_Detection_JetsonNano.md)
 
