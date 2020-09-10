@@ -1,4 +1,4 @@
-# Run Mobilenet-SSD-V2 on Jetson Nano
+# Run Custom Finetuned Mobilenet-SSD-V2 on Jetson Nano
 
 
 
