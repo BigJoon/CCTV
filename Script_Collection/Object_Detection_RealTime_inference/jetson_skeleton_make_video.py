@@ -1,3 +1,6 @@
+#This script can be executed at /trt_pose/tasks/human_pose
+#Of course it's python3
+
 import json
 import trt_pose.coco
 import trt_pose.models
