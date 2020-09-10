@@ -1,5 +1,7 @@
 # Run Mobilenet-SSD-V2 on Jetson Nano
 
+
+
 ## 첫번째 과정
  - PASCALVOC DATA 를 TFrecord로 변환한다. (tfrecord는 데이터를 시리얼화 시키는 작업이므로 딱히 용량이 줄어들지 않는다. 별도의 하드디스크에 저장하는 것을 추천한다.)
  
