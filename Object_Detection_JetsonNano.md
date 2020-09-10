@@ -1,4 +1,10 @@
 # Run Custom Finetuned Mobilenet-SSD-V2 on Jetson Nano
+
+##Requirements
+ - d
+ - d
+ - d ...
+
 [![이미지](https://github.com/BigJoon/CCTV/blob/master/Script_Collection/whole_process.jpg)](https://github.com/BigJoon/CCTV/blob/master/Object_Detection_JetsonNano.md)
 
 ## 1. Creating Custom Dataset -Done
