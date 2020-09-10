@@ -1,5 +1,5 @@
 # Run Custom Finetuned Mobilenet-SSD-V2 on Jetson Nano
-[![이미지](
+[![이미지](https://github.com/BigJoon/CCTV/blob/master/Script_Collection/process.jpg )](https://github.com/BigJoon/CCTV/edit/master/Object_Detection_JetsonNano.md)
 
 
 ## 첫번째 과정
