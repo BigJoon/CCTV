@@ -1,4 +1,5 @@
 # Nvidia Jetson Nano: Custom Object Detection from scratch using Tensorflow, OpenCV and TensorRT
+https://img.shields.io/github/issues/beygee/survive
 
 ## Requirements
  - TensorFlow 1.12
