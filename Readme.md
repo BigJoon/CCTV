@@ -1,5 +1,5 @@
 # Nvidia Jetson Nano: Custom Object Detection from scratch using Tensorflow, OpenCV and TensorRT
-![test](https://img.shields.io/badge/lang-python3-brightgreen)
+![test](https://img.shields.io/badge/language-python3-brightgreen)
 
 
 ## Requirements
