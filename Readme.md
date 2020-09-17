@@ -3,6 +3,7 @@
 
 
 ## Requirements
+ - Ubuntu 18.04
  - TensorFlow 1.12
  - OpenCV
  - Jetson Nano Developer Kit
