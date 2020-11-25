@@ -8,6 +8,7 @@
  - OpenCV
  - Jetson Nano Developer Kit
  - Python
+ - GTX 1080Ti. 등 GTX계열의 GPU 필요.(RTX는 동작 보장 못함.)
 
 [![이미지](https://github.com/BigJoon/CCTV/blob/master/Script_Collection/whole_process.jpg)](https://github.com/BigJoon/CCTV/blob/master/Object_Detection_JetsonNano.md)
 
