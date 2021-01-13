@@ -6,10 +6,6 @@
 import os
 from xml.etree.ElementTree import parse
 import shutil
-#여기엔 원본 데이터에서 VOC2007 까지의 경로를 넣어주면 될듯?
-dataset_path = '/hdd/TMP_D/Resized_Data_Voc_For_Song/VOCdevkit/VOC2007'
-image_dir_path = os.path.join(dataset_path,'JPEGImages')
-annotations_dir_path = os.path.join(dataset_path, 'Annotations')
 
 ##First Read "trainval.txt"
 f = open('trainval.txt',mode='rt',encoding='utf-8')
